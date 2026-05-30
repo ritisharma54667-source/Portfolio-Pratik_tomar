@@ -1221,29 +1221,32 @@ footer p {
         <a href="https://www.instagram.com/driftindreams" target="_blank" class="c-link"><div class="c-link-icon">📸</div>@_driftindreams</a>
       </div>
     </div>
-    <div class="form-wrap">
-      <div class="form-title">// Send a Message</div>
-      <div class="form-row">
-        <div class="form-field">
-          <label>Name</label>
-          <input type="text" placeholder="Your name"/>
-        </div>
-        <div class="form-field">
-          <label>Email</label>
-          <input type="email" placeholder="you@example.com"/>
-        </div>
+   <div class="form-wrap">
+  <div class="form-title">// Send a Message</div>
+  <form action="https://formspree.io/f/xpqnngwz" method="POST">
+    <div class="form-row">
+      <div class="form-field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name" required/>
       </div>
       <div class="form-field">
-        <label>Subject</label>
-        <input type="text" placeholder="What's this about?"/>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required/>
       </div>
-      <div class="form-field">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Tell me about your project..."></textarea>
-      </div>
-      <button class="btn-primary" style="width:100%;margin-top:4px;" onclick="this.textContent='Message Sent ✓';this.style.background='var(--neon-green)'">Send Message</button>
     </div>
-  </div>
+    <div class="form-field">
+      <label>Subject</label>
+      <input type="text" name="subject" placeholder="What's this about?" required/>
+    </div>
+    <div class="form-field">
+      <label>Message</label>
+      <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+    </div>
+    <button type="submit" class="btn-primary" style="width:100%;margin-top:4px;">
+      Send Message
+    </button>
+  </form>
+</div>
 </section>
 
 <!-- FOOTER -->
